@@ -1,3 +1,4 @@
+import Banner from "./components/banner/Banner";
 import HomeScreen from "./pages/home-page";
 
 function App() {
