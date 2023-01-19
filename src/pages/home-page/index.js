@@ -1,14 +1,21 @@
 import React from 'react';
 import Banner from '../../components/banner/Banner';
 import NavigationBar from '../../components/navigation-bar/NavigationBar';
+import requests from '../../config/api/links';
 export default function HomeScreen() {
 	return (
-		<div className='homeScreen'>
-			{/* NAV */}
+		<>
 			<NavigationBar/>
-			{/* Banner */}
 			<Banner/>
-			{/* Row */}
-		</div>
+			{/* <Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			<Row title="Trending Now" fetchUrl={requests.fetchAllTrending} />
+			 */}
+		</>
 	);
 }
