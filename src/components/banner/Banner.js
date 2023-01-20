@@ -4,7 +4,7 @@ import { axiosConfig } from '../../config/axios/axiosConfig';
 export default function Banner() {
 	const [tvShow, setTvShow] = useState();
 	useEffect(() => {
-	return async () => {
+	const fetchData= async  () => {
 			const request = await axiosConfig.get(requests.fetchNetflixOriginals);
 			setTvShow(
 				request.data.results[
@@ -12,6 +12,7 @@ export default function Banner() {
 				],
 			);
 		};
+		fetchData();
 	}, []);
 	return (
 		<header

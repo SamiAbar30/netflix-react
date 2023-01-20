@@ -5,11 +5,12 @@ export default function Row({ title, fetchUrl, isLargRow = false }) {
 	const [items, setItems] = useState();
 	const base_url = 'https://image.tmdb.org/t/p/original/';
 	useEffect(() => {
-		return async () => {
+		const fetchData= async () => {
 			const request = await axiosConfig.get(fetchUrl);
       console.log(request.data.results);
 			setItems(request.data.results);
 		};
+    fetchData();
 	}, []);
 	return (
 		<div className='text-white ml-5'>
