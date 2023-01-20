@@ -1,12 +1,11 @@
-import Banner from "./components/banner/Banner";
-import HomeScreen from "./pages/home-page";
-import './App.css'
+import './App.css';
+import { Outlet } from 'react-router-dom';
 function App() {
-  return (
-    <div className="bg-black h-full">
-    <HomeScreen/>
-    </div>
-  );
+	return (
+		<div className='bg-black h-full'>
+			<Outlet />
+		</div>
+	);
 }
 
 export default App;

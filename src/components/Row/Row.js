@@ -7,7 +7,6 @@ export default function Row({ title, fetchUrl, isLargRow = false }) {
 	useEffect(() => {
 		const fetchData= async () => {
 			const request = await axiosConfig.get(fetchUrl);
-      console.log(request.data.results);
 			setItems(request.data.results);
 		};
     fetchData();
