@@ -5,7 +5,7 @@ import Row from '../../components/Row/Row';
 import requests from '../../config/api/links';
 export default function HomeScreen() {
 	return (
-		<>
+		<div className='bg-black h-full'>
 			<NavigationBar />
 			<Banner />
 			<Row
@@ -20,6 +20,6 @@ export default function HomeScreen() {
 			<Row title='Horror Movies' fetchUrl={requests.fetchHorrorMovies} />
 			<Row title='Romance Movies' fetchUrl={requests.fetchRomanceMovies} />
 			<Row title='Documentaries' fetchUrl={requests.fetchDocumentaries} />
-		</>
+		</div>
 	);
 }
